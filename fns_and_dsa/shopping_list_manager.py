@@ -14,11 +14,11 @@ def main():
     choice = input("Enter your choice: ")
     while True:
         match choice:
-            case 1:
+            case '1':
                 item = input('enter item  to add: ')
                 shopping_list.append(item)
                 print(f"{item} was added\n")
-            case 2:
+            case '2':
                 item = input('enter item  to remove: ')
                 if item not in shopping_list:
                     print('no  item whit this name was found \n')
@@ -26,12 +26,12 @@ def main():
                 else:
                     shopping_list.remove(item)
                     print(f"{item} was removed\n")
-            case 3:
+            case '3':
                 print("Shopping list:")
                 for item in shopping_list:
                     print(f"{item}\n")
 
-            case 4:
+            case '4':
                 print('good bay')
                 break
             case _:
