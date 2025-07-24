@@ -15,11 +15,11 @@ def main():
     while True:
         match choice:
             case 1:
-                item = input('enter item name to add: ')
+                item = input('enter item  to add: ')
                 shopping_list.append(item)
                 print(f"{item} was added\n")
             case 2:
-                item = input('enter item name to remove: ')
+                item = input('enter item  to remove: ')
                 if item not in shopping_list:
                     print('no  item whit this name was found \n')
 
