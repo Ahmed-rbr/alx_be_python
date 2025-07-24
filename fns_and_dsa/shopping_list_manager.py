@@ -1,19 +1,19 @@
 
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
+
 
 def main():
-    user_choice = 5
 
     shopping_list = []
-    print("Shopping List Manager")
-
-    while user_choice != 4:
-        try:
-            user_choice = int(
-                input("1. Add Item\n2. Remove Item\n3. View List\n4. Exit\nChoose an option: "))
-        except ValueError:
-            print("Please enter a valid number (1-4).\n")
-            continue
-        match user_choice:
+    display_menu()
+    choice = input("Enter your choice: ")
+    while True:
+        match choice:
             case 1:
                 item = input('enter item name to add: ')
                 shopping_list.append(item)
@@ -35,7 +35,7 @@ def main():
                 print('good bay')
                 break
             case _:
-                print("Invalid choice")
+                print("Invalid choice. Please try again.")
 
 
 main()
